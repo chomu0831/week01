@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>連絡先</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .contact-container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .contact-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 18px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      justify-content: center;
+      transition: transform 0.2s;
+    }
+
+    .contact-item:hover {
+      transform: scale(1.05);
+    }
+
+    .contact-item a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .contact-item i {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+    <div class="contact-title">連絡先</div>
+    <div class="contact-list">
+      <div class="contact-item">
+        <i class="fab fa-instagram"></i>
+        <a href="https://www.instagram.com/chomu0410?igsh=ejJxdmpyYWRjbzBw&utm_source=qr" target="_blank">Instagram</a>
+      </div>
+      <div class="contact-item">
+        <i class="fab fa-x-twitter"></i>
+        <a href="https://twitter.com/@Chomu_0410" target="_blank">X（旧Twitter）</a>
+      </div>
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span class="email-text">大学用：a240847t@reitaku.jp</span>
+        </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a class="email-text">個人用：tashixinijing08@gmail.com</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>学歴紹介</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f8ff;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .school-box {
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .school-box:hover {
+      transform: scale(1.03);
+    }
+
+    .school-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .school-name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #0066cc;
+      margin-bottom: 10px;
+    }
+
+    .school-period {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .school-info {
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="school-box">
+      <img src="小学校.jpg" alt="○○小学校" class="school-image">
+      <div class="school-name">松戸市立栗ヶ沢小学校</div>
+      <div class="school-period">2011年4月 〜 2017年3月</div>
+      <div class="school-info">いい思い出がたくさんできた小学校。</div>
+    </div>
+
+    <div class="school-box">
+      <img src="中学校.jpg" alt="○○中学校" class="school-image">
+      <div class="school-name">松戸市立栗ヶ沢中学校</div>
+      <div class="school-period">2017年4月 〜 2020年3月</div>
+      <div class="school-info">部活ではバドミントン部に所属。3年生のときの最後の大会で、松戸市内ベスト８に入ることができました！</div>
+    </div>
+
+    <div class="school-box">
+      <img src="馬橋.jpg" alt="○○高等学校" class="school-image">
+      <div class="school-name">千葉県立松戸馬橋高等学校</div>
+      <div class="school-period">2020年4月 〜 2023年3月</div>
+      <div class="school-info">2年生からはクラスが文系・理系ごとに分かれ、僕は理系方面に行きました。数学Ⅲにものすごく苦しめられた思い出があります笑</div>
+    </div>
+
+    <div class="school-box">
+      <img src="麗澤さつき.jpg" alt="△△大学" class="school-image">
+      <div class="school-name">麗澤大学 工学部工学科　情報工学システム専攻</div>
+      <div class="school-period">2023年4月 〜 現在</div>
+      <div class="school-info">情報系を学びながら、バドサークルにも所属中！</div>
+    </div>
+  </div>
+
+</body>
+</html>
