@@ -1,63 +1,182 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <meta name="GENERATOR" content="JustSystems Homepage Builder Version 20.0.6.0 for Windows">
+  <meta charset="Shift_JIS">
   <title>新井拓実のホームページ</title>
-<style>
+  <style>
     body {
-        background-image: url('20250326_081335139_ios.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+      background-image: url('IMG_8927.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      font-family: sans-serif;
     }
-</style>
+
+    .main-container {
+      padding: 20px;
+    }
+
+    .top-banner {
+      background-color: transparent;
+      padding: 30px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .section-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .section-card {
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      text-align: center;
+      color: #333;
+      background-color: transparent; /* 背景色を透明に設定 */
+    }
+
+    /* プロフィールカード */
+    .section-card.profile {
+      flex: 1 1 calc(33% - 20px);
+      min-width: 280px;
+    }
+
+    /* 趣味カード */
+    .section-card.hobby {
+      flex: 1 1 calc(20% - 20px); /* 趣味のサイズを小さく */
+      min-width: 180px; /* 趣味カードの最小幅 */
+    }
+
+    /* 連絡先カード */
+    .section-card.contact {
+      flex: 1 1 calc(30% - 20px); /* 連絡先を空いているスペースに広げる */
+      min-width: 280px;
+    }
+
+    .section-card h2 {
+      color: #007bff;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 10px auto;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    /* プロフィールと出身地マップを横に並べる */
+    .profile-content {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .profile-img, iframe {
+      flex: 1;
+    }
+
+    /* メニュー */
+    .sidebar {
+      width: 150px;
+      background-color: #F0F0FF;
+      padding-top: 20px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .menu-table td {
+      padding: 4px 6px;
+    }
+  </style>
 </head>
 <body bgcolor="#FFFFFF">
   <table border="0" width="100%" height="100%">
     <tr>
-    </td>
       <!-- 左メニュー -->
-      <td width="150" bgcolor="#F0F0FF" valign="top">
-        <br>
-        <table border="0" width="142">
-          <tr><td width="10">　</td><td width="10"><font color="#FFCCCC">●</font></td><td><a href="main.html">トップ</a></td></tr>
-          <tr><td width="10">　</td><td width="10"><font color="#FFCCCC">●</font></td><td><a href="profile.html">プロフィール</a></td></tr>
-          <tr><td width="10">　</td><td width="10"><font color="#FFCCCC">●</font></td><td><a href="hobby.html">趣味</a></td></tr>
-          <tr><td width="10">　</td><td width="10"><font color="#FFCCCC">●</font></td><td><a href="contact.html">連絡先</a></td></tr>
-          <tr><td width="10">　</td><td width="10"><font color="#FFCCCC">●</font></td><td><a href="history.html">出身校</a></td></tr>
+      <td class="sidebar" valign="top">
+        <table class="menu-table" border="0" width="142">
+          <tr><td>　</td><td><font color="#FFCCCC">●</font></td><td><a href="main.html">トップ</a></td></tr>
+          <tr><td>　</td><td><font color="#FFCCCC">●</font></td><td><a href="profile.html">プロフィール</a></td></tr>
+          <tr><td>　</td><td><font color="#FFCCCC">●</font></td><td><a href="hobby.html">趣味</a></td></tr>
+          <tr><td>　</td><td><font color="#FFCCCC">●</font></td><td><a href="contact.html">連絡先</a></td></tr>
+          <tr><td>　</td><td><font color="#FFCCCC">●</font></td><td><a href="history.html">出身校</a></td></tr>
         </table>
       </td>
 
       <!-- 右本文 -->
-      <td valign="top" style="padding: 20px; text-align: center; color: #00ffff">
-        <a name="top"></a>
-        <h2>トップページ</h2>
-        <p>こんにちは！麗澤大学工学部工学科情報システム専攻の新井拓実です。<br>
-        このページでは、大まかに、私のプロフィールをご紹介します～。</p>
+      <td valign="top">
+        <div class="main-container">
 
-        <a name="profile"></a>
-        <h2>プロフィール</h2>
-        <p>名前：新井拓実<br>
-        出身：千葉県松戸市小金原7-10-26<br>
-        特技：初めて触れるゲームでもすぐに慣れる</p>
-        <p><img src="IMG_4228.JPEG" alt="プロフィール写真" width="200"style="border-radius:50%;"></p>
+          <!-- トップページ（バナー） -->
+          <div class="top-banner">
+            <h1>トップページ</h1>
+            <p>こんにちは！麗澤大学工学部工学科情報システム専攻の新井拓実です。<br>
+            このページでは、大まかに、私のプロフィールをご紹介します～。</p>
+          </div>
 
-        <a name="hobby"></a>
-        <h2>趣味・好きなもの</h2>
-        <p>・ゲーム（PC・Switch・PS5・スマホ）<br>
-        ・ホロライブ（推しは「白上フブキ」<br>
-        ・アニメ視聴<br>
-        ・ボカロ試聴　等など<br>
-        <br>
+          <!-- 残り3セクション -->
+          <div class="section-grid">
 
-        <a name="contact"></a>
-        <h2>連絡先</h2>
-        <p>Instagram：<a href="https://www.instagram.com/chomu0410?igsh=ejJxdmpyYWRjbzBw&utm_source=qr" target="_blank">chomu0410</a><br>
-        <p>メール：a240847t@reitaku.jp</p>
-        </h2>
+            <!-- プロフィール -->
+            <div class="section-card profile">
+              <h2>プロフィール</h2>
+              <p>名前：新井拓実<br>
+              出身：千葉県松戸市小金原7-10-26<br>
+              特技：初めて触れるゲームでもすぐに慣れる</p>
+              
+              <!-- 写真と出身地マップを横並び -->
+              <div class="profile-content">
+                <img src="IMG_4228.JPEG" alt="プロフィール写真" class="profile-img">
+                <div>
+                  <h3>出身地マップ</h3>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.550614934928!2d139.94507561525804!3d35.81808838016067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601887aa1ea4f12d%3A0x83c7c25145c99f11!2z5YyX5Y2D5p2R5bKh5bGx!5e0!3m2!1sja!2sjp!4v1713453450507!5m2!1sja!2sjp"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                </div>
+              </div>
+            </div>
 
+            <!-- 趣味 -->
+            <div class="section-card hobby">
+              <h2>趣味・好きなもの</h2>
+              <p>・ゲーム（PC・Switch・PS5・スマホ）<br>
+              ・ホロライブ（推しは「白上フブキ」）<br>
+              ・アニメ視聴<br>
+              ・ボカロ試聴　等など</p>
+            </div>
+
+            <!-- 連絡先 -->
+            <div class="section-card contact">
+              <h2>連絡先</h2>
+              <p>Instagram：<a href="https://www.instagram.com/chomu0410" target="_blank">chomu0410</a><br>
+              メール（大学）：a240847t@reitaku.jp<br>
+              メール（個人）：example@gmail.com</p>
+            </div>
+
+          </div>
+
+        </div>
       </td>
     </tr>
   </table>
